@@ -2,5 +2,8 @@ from django.db import models
 
 class Holliday(models.Model):
   id = models.AutoField(primary_key=True)
-  celebration = models.CharField(max_length=200)
-  date = models.DateField
+ nome = models.CharField('Feriado',max_length=50)
+ dia = models.IntegerField('Data')
+ mes = models.IntegerField('Mês')
+ def __str__(self):
+ return self.nome
